@@ -1,0 +1,16 @@
+.input1{
+    
+    border: 2px solid black;
+    width: 195px;
+    text-align: center;
+    padding: center;
+    height: 49px;
+    margin-left:35px;
+}
+.byn{
+    text-align: center;
+    margin-left: 34%;
+}
+.flex-container{
+    display: flex;
+}

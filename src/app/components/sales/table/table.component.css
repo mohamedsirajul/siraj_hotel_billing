@@ -1,0 +1,155 @@
+
+table {
+    width: 100%;
+    text-align: center;
+  }
+  .table3{
+ 
+width: 100%;
+}
+.total{
+    margin-right: 20px;
+    font-style: italic;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 5px;
+    
+}
+.quantity{
+    margin-right: 20px;
+    font-style: italic;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+}
+.amount{
+    margin-right: 20px;
+    font-style: italic;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+}
+
+
+.mat-header-cell{
+    text-align: center;
+    width: 20px;
+    font-size: 17px;
+    font-style: italic;
+    text-shadow: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+
+}
+.mat-cell{
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+::placeholder{
+    margin: 0px;
+
+}   
+.table2{
+    width: 100%;
+    /* margin-left: 210px; */
+}
+
+.filter{
+   
+    margin: 0px;
+    border:  solid black;
+    width: 100%;
+    height: 45px;
+}
+
+input{
+    
+    
+    border: 0px solid black;
+    width: 125px;
+    text-align: center;
+    padding: center;
+   height: 29px;
+}
+#button1{
+    margin-left: 15px;
+}
+
+
+button{
+    
+    height: 34px;
+    border: solid black 2px;
+}
+label{
+    font-size: 20px;
+    margin-left: 15px;
+    width: 135px;
+    text-align: center;
+    padding: center;
+}
+input{
+    margin-left: 15px;
+    
+   
+    width: 125px;
+    text-align: center;
+    padding: center;
+    height: 29px;
+}
+.input1{
+    margin-left: 130px;
+    
+    border: 2px solid black;
+    width: 125px;
+    text-align: center;
+    padding: center;
+    height: 29px;
+}
+label{
+    font-size: 20px;
+    margin-left: 15px;
+    width: 135px;
+    text-align: center;
+    padding: center;
+}
+.option{
+   font-size: 15px;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.option:hover{
+    background-color: rgb(182, 180, 180);
+}
+button{
+    margin-left: 15px;
+    height: 29px;
+    border: solid black 2px;
+}
+mat-icon{
+    padding-bottom: 12px;
+    color: #FF0000;
+}
+.btn{
+    background-color: white;
+    border-color: white;
+}
+.example-button-row button,
+.example-button-row a {
+  margin-right: 8px;
+
+  height: 40px;
+
+}
+.kot{
+padding-bottom: 30px;
+text-align: center;
+width: 100px;
+
+}
+.print{
+    padding-bottom:30px;
+    text-align: center;
+    width: 100px;
+
+}
+
+
+  

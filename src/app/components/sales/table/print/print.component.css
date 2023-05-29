@@ -1,0 +1,26 @@
+.cancel{
+    margin-left: 12%;
+}
+.table{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: none;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: .25rem;
+}
+td{
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
+h5{
+    text-align: center;
+}
+/* .clock{
+    
+} */

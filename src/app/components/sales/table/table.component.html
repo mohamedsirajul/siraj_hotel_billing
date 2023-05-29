@@ -1,0 +1,126 @@
+
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+
+
+  <mat-card>
+    <input
+    class="filter"
+    matInput
+    (keyup)="applyFilter($event)"
+    placeholder="Search Item"
+    #input
+    type="text"
+    [matAutocomplete]="auto"
+    [formControl]="myControl"
+    matInput  
+  />
+  <mat-autocomplete
+    #auto="matAutocomplete"
+    (optionSelected)="onSelectionChange($event.option.value) "
+  >
+    <mat-option
+      *ngFor="let option of filteredOption | async" [value]="option" class="option" >
+    
+      {{ option }}
+    </mat-option>
+  </mat-autocomplete>
+
+  </mat-card>
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef>No.</th>
+    <td mat-cell *matCellDef="let i=index">{{ i+1}}</td>
+    <td mat-footer-cell *matFooterCellDef>Total</td>
+  </ng-container>
+
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef>Product</th>
+    <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="quantity">
+    <th mat-header-cell *matHeaderCellDef>Quantity</th>
+
+    <td mat-cell *matCellDef="let element">
+      {{ element.quantity }}
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="price">
+    <th mat-header-cell *matHeaderCellDef>Price</th>
+    <td mat-cell *matCellDef="let element">{{ element.price }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="amount">
+    <th mat-header-cell *matHeaderCellDef>Amount</th>
+    <td mat-cell *matCellDef="let element">
+      {{ element.amount }}
+    </td>
+  </ng-container>
+  <ng-container matColumnDef="action">
+    <th mat-header-cell *matHeaderCellDef>Action</th>
+    <td mat-cell *matCellDef="let element">
+      <button
+        mat-raised-button
+        class="btn btn-danger"
+        (click)="deleteProduct(element)"
+      >
+        <mat-icon>delete</mat-icon>
+      </button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+
+  <tr class="mat-row" *matNoDataRow>
+    <td class="mat-cell" colspan="6">
+      Search a Product     </td>
+  </tr>
+</table>
+<mat-card>
+ 
+  <hr />
+
+  <table class="table3">
+    <tr>
+      <td>
+        <label class="total">Total Product</label>
+        {{ getTotalProdut() }}
+      </td>
+      <td>
+        <label class="quantity">Total Quantity</label>
+        {{ getTotalQuantity()}}
+      </td>
+      <td>
+        <label class="amount">Total Amount</label>
+     
+        {{ getTotalAmount() }}
+      </td>
+      <td>
+              
+      </td>
+      <td>
+              
+      </td>
+      <td>
+             
+      </td>
+    </tr>
+  </table>
+  <hr />
+  <table>
+    <tr>
+      <td>
+        <button class="kot" (click)="kot_bill()" mat-raised-button color="primary">KOT</button>
+      </td>
+      <td>
+        <button class="print" (click)="print_bill()"  mat-raised-button color="accent">Print</button>
+      </td>
+    </tr>
+  </table>
+</mat-card>
